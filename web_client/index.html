@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+        <title>Index</title>
+        <link rel="stylesheet" href="static/css/master.css" type="text/css" media="screen" charset="utf-8">
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://localhost:8001/socket.io/socket.io.js"></script>
+        <script type="text/javascript" charset="utf-8" src="static/js/socketlib.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>PingDuino</h1>
+                <h2>Arduino live status panel</h2>
+            </header>
+
+            <section id="statusBoard">
+                <section class="box">
+                    <h3>Online clients</h3>
+                    <p id="onlineClients"></p>
+                </section>
+                <section class="box">
+                    <h3>Number of times the button was pressed</h3>
+                    <p id="buttonEventCount"></p>
+                </section>
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+/* Fonts */
+
+@font-face {
+    font-family: avenir_light;
+    src: url('../fonts/avenir_light.eot');
+    src: url('../fonts/avenir_light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir_light.woff') format('woff'),
+         url('../fonts/avenir_light.ttf') format('truetype'),
+         url('../fonts/avenir_light.svg#avenirregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: avenir_light;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: 0px auto;
+    display: block;
+    width: 900px;
+}
+
+
+header {
+    float: left;
+    background: #a7bc54;
+    margin-top: 20px;
+    width: 100%;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 80px 20px 0px 20px;
+}
+
+header h2 {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0px 20px 20px 20px;
+}
+
+#statusBoard {
+    background: #DEDEDE;
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.box {
+    float: left;
+    margin: 20px;
+}
+
+.box h3 {
+    color: #333333;
+    font-size: 20px;
+    text-align: center;
+    width: 410px;
+}
+
+.box p {
+    color: #333333;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+}
