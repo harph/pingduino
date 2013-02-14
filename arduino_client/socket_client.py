@@ -1,6 +1,16 @@
+from serial import Serial
 from socketIO_client import SocketIO
 
-s = SocketIO('localhost', 8001)
-s.emit('buttonPush')
+old_value = 0
 
-s.close()
+serial_port = Serial('/dev/cu.usbmodem1a21', 9600)
+socket = SocketIO('localhost', 8001)
+count = 0
+while 1:
+    value = serial_port.read()
+    socket.emit('buttonPush', {})
+    count += 1
+    if count % 10 == 0:
+        print "writing"
+        serial_port.write("RED");
+socket.close()

@@ -15,6 +15,7 @@ associated with a real button connected to and Arduino board.
 
 + Python 2.7
 + SocketIO_client
++ pySerial
 + Node.js
 + Socket.io
 
