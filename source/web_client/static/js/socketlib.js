@@ -14,7 +14,7 @@ $(document).ready( function() {
     };
     
     function beep() {
-        socket.emi('beep', {});
+        socket.emit('beep', {});
     };
 
     $('#beepButton').click(beep);
