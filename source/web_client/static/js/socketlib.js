@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost', {port: 8001});
+var socket = io.connect('', {port: 8001});
 
 function updateClients(data) {
     $('#onlineClients').html(data.clients);
