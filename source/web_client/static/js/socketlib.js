@@ -1,4 +1,4 @@
-$(document) {
+$(document).ready {
     var socket = io.connect('', {port: 8001});
     
     function updateArduinoStatus(data) {
