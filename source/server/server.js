@@ -1,6 +1,5 @@
 var io = require('socket.io').listen(8001);
 
-
 var clients = [];
 var buttonEventCount = 0;
 
