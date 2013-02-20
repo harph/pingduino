@@ -6,7 +6,7 @@ var clients = [];
 var arduinoStatus = 'offline';
 var buttonEventCount = 0;
 var dataPotentiometer = {value: null};
-var dataLightSensor = {value: null;
+var dataLightSensor = {value: null};
 
 function updateClients(socket) {
     socket.emit('updateClients', {clients: clients.length});
