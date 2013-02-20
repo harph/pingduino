@@ -45,6 +45,15 @@ if __name__ == '__main__':
     print 'Creating socket with:', socket_host
     socket = SocketIO(socket_host, 8002, Namespace=ArduinoNameSpace)
     while 1:
-        serial_port.read()
-        socket.emit('buttonPush', {})
+        serial_input = serial_port.readline().replace('\r\n', '').split(':')
+        print serial_input
+        if not serial_input:
+            continue
+        event_type = serial_input[0]
+        if event_type == 'BUTTON':
+            socket.emit('buttonPush', {})
+        elif event_type == 'POTENTIOMETER':
+            socket.emit('potentiometerChanged', {'value': serial_input[1]})
+        elif event_type == 'LIGHT_SENSOR':
+            socket.emit('lightSensorChanged', {'value': serial_input[1]})
     socket.close()

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="static/css/master.css" type="text/css" media="screen" charset="utf-8">
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="/socket.io/socket.io.js"></script>
-        <script type="text/javascript" charset="utf-8" src="/static/js/socketlib.js"></script>
+        <script type="text/javascript" charset="utf-8" src="static/js/socketlib.js"></script>
     </head>
     <body>
         <div class="container">
@@ -17,20 +17,28 @@
             </header>
 
             <section id="statusBoard">
-                <section id="arduinoStatus" class="box">
-                    <h3>Arduino status</h3>
-                    <span id="arduinoStatusEvent"></span>
+                <section class="box1">
+                    <h3>Arduino status: <span id="arduinoStatusEvent"></span></h3>
                 </section>
-                <section class="box">
+                <section class="box2 marginZero">
                     <h3>Online clients</h3>
-                    <p id="onlineClients"></p>
+                    <p id="onlineClients">15</p>
                 </section>
-                <section class="box">
-                    <h3>Number of times the button was pressed</h3>
-                    <p id="buttonEventCount"></p>
+                <section class="box2">
+                    <h3>No. of times the button has been pressed</h3>
+                    <p id="buttonEventCount">162</p>
                 </section>
-                <section class="box">
-                    <input type="button" id="beepButton" value="beep"/>
+                <section class="box3 interactive marginZero">
+                    <h3>Beep</h3>
+                    <div id="beepButton"></div>
+                </section>
+                <section class="box3">
+                    <h3>Potentiometer</h3>
+                    <p id="potentiometerValue"></p>
+                </section>
+                <section class="box3">
+                    <h3>Light Sensor</h3>
+                    <p id="lightSensorValue"></p>
                 </section>
             </section>
         </div>

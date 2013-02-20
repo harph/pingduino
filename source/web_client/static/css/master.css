@@ -1,21 +1,11 @@
-/* Fonts */
-
-@font-face {
-    font-family: avenir_light;
-    src: url('../fonts/avenir_light.eot');
-    src: url('../fonts/avenir_light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/avenir_light.woff') format('woff'),
-         url('../fonts/avenir_light.ttf') format('truetype'),
-         url('../fonts/avenir_light.svg#avenirregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 * {
-    font-family: avenir_light;
+    font-family: heveltica, arial, "sans-serif", serif;
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    background: #333;    
 }
 
 .container {
@@ -36,49 +26,82 @@ header h1 {
     color: #FFFFFF;
     font-size: 40px;
     font-weight: bold;
-    text-transform: uppercase;
+    letter-spacing: 4px;
     margin: 80px 20px 0px 20px;
+    text-transform: uppercase;
 }
 
 header h2 {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: normal;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0px 20px 20px 20px;
 }
 
 #statusBoard {
-    background: #DEDEDE;
+    /*background: #DEDEDE; */
     float: left;
     margin-top: 20px;
     width: 100%;
 }
 
-.box {
+#statusBoard .marginZero {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.box1, .box2, .box3 {
+    background: #6D6E71;
     float: left;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
-.box h3 {
-    color: #333333;
+.box1 h3,
+.box2 h3,
+.box3 h3 {
+    color: #DEDEDE;
     font-size: 20px;
+    letter-spacing: 1px;
+    margin: 20px 20px;
     text-align: center;
-    width: 410px;
 }
 
-.box p {
+.box1 p,
+.box2 p,
+.box3 p {
     color: #333333;
     font-size: 100px;
     font-weight: bold;
     text-align: center;
 }
 
-#arduinoStatus { 
-    margin: 0px;
-    width: 100%;
+.box1 {
+    min-height: 40px;
+    width: 100%;    
 }
 
-#arduinoStatus h3 {
-    
+.box2 {
+    height: 200px;
+    margin-left: 20px;
+    width: 440px;
+}
+
+.box3 {
+    height: 200px;
+    margin-left: 21px;
+    width: 286px;
+}
+
+.interactive {
+    background: #517499;
+}
+
+#beepButton {
+    background: url(../img/beep.png) no-repeat center center;
+    float: left;
+    height: 103px;
+    margin: 0px 71px;
+    width: 146px;
 }

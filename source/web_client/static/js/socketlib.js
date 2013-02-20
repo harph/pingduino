@@ -12,6 +12,14 @@ $(document).ready( function() {
     function updateButtonEvents(data) {
         $('#buttonEventCount').html(data.buttonEventCount);
     };
+
+    function updatePotentiometerValue(data) {
+        $('#potentiometerValue').html(data.value);
+    }
+    
+    function updateLightSensorValue(data) {
+        $('#lightSensorValue').html(data.value);
+    }
     
     function beep() {
         socket.emit('beep', {});
@@ -22,4 +30,6 @@ $(document).ready( function() {
     socket.on('updateArduinoStatus', updateArduinoStatus);
     socket.on('updateClients', updateClients);
     socket.on('updateButtonEvents', updateButtonEvents);
+    socket.on('updatePotentiometerValue', updatePotentiometerValue);
+    socket.on('updateLightSensorValue', updateLightSensorValue);
 });
