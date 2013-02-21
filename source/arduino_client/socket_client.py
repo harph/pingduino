@@ -15,7 +15,7 @@ def _get_arduino_port():
     if cu_ports:
         port = cu_ports[0]
     else:
-        tty_ports = glob.glob('/dev/tty.usbmodemfd*')
+        tty_ports = glob.glob('/dev/tty.usbmodem*')
         if tty_ports:
             port = tty_ports[0]
     if not port:
