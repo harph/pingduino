@@ -10,12 +10,12 @@ BEEP = struct.pack('B', 12)
 def _get_arduino_port():
     # TODO: find a better way to do this.
     serial_port = None
-    cu_ports = glob.glob('/dev/cu.usbmodemfd*')
+    cu_ports = glob.glob('/dev/cu.usbmodem*')
     port = None
     if cu_ports:
         port = cu_ports[0]
     else:
-        tty_ports = glob.glob('/dev/tty.usbmodemfd*')
+        tty_ports = glob.glob('/dev/tty.usbmodem*')
         if tty_ports:
             port = tty_ports[0]
     if not port:
